@@ -16,7 +16,7 @@ const SobreMi = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/aboutme', {
+        fetch('https://porfolio-back-lr6x.onrender.com/api/aboutme', {
             method: 'GET',
         })
             .then(response => response.json())

@@ -25,7 +25,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8080/api/messages', {
+            const response = await fetch('https://porfolio-back-lr6x.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

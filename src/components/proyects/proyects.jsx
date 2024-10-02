@@ -11,7 +11,7 @@ const Proyects = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/proyects', {
+        fetch('https://porfolio-back-lr6x.onrender.com/api/proyects', {
             method: 'GET',
             credentials: 'include'
         })
