@@ -1,0 +1,346 @@
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #202334;
+  border-radius: 7px;
+}
+
+.imagenes_Skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #202334;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.imagenes_certificates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.img_principal {
+  width: 19%;
+}
+
+.img_certificates {
+  width: 400px;
+  min-height: 300px;
+  margin: 15px;
+  border-radius: 7px;
+  transition: transform 0.5s ease;
+  /* Ajusta la transición para que sea más suave */
+}
+
+/* .img_certificates:hover {
+  transform: scale(1.1); 
+} */
+
+.img_skills {
+  min-width: 10px;
+  max-height: 35px;
+  margin: 10px;
+  text-align: center;
+  
+}
+
+.img_proyects {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 7px;
+}
+
+.proyectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.proyect {
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #202334;
+}
+
+
+.divContainer {
+  padding: 20px;
+}
+
+.divContainerTools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 5px;
+
+}
+
+.black-button {
+  background-color: black;
+  border-color: black;
+  color: rgb(10, 10, 10);
+}
+
+/* h1{
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+} */
+p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+
+h3 {
+  text-align: center;
+  margin: 10px;
+  color: yellow;
+}
+
+
+
+h1 {
+  font-size: 24px;
+  /* Tamaño moderado */
+  font-weight: bold;
+  /* Resalta el título */
+  text-align: center;
+  /* Centra el texto */
+  color: yellow;
+  /* Color claro para contrastar con el fondo oscuro */
+  margin: 5px;
+  text-decoration: underline;
+}
+
+h4 {
+  font-size: 18px;
+  /* Tamaño más pequeño que el h1 */
+  font-weight: normal;
+  text-align: center;
+  color: #c7c7c7;
+  /* Color gris claro que combina bien con el fondo oscuro */
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bolder;
+  color: #e0e0e0;
+  /* Color claro para el texto debajo de las imágenes */
+}
+
+.dark {
+  background-color: #292c3E;
+  /* Color de fondo para el modo oscuro */
+  color: white;
+  /* Color de texto para el modo oscuro */
+}
+
+.light {
+  background-color: #f5f5f5;
+  /*Color de fondo para el modo claro */
+  color: black;
+  /* Color de texto para el modo claro */
+}
+
+.light .imagenes_Skills {
+  background-color: #c7c7c7;
+  /* border-radius: 0;*/
+
+}
+
+.light .proyect {
+  background-color: #c7c7c7;
+}
+
+.light .imagenes {
+  background-color: #c7c7c7;
+  border-radius: 7px;
+}
+
+/* Estilos para el tema claro */
+.light h1,
+.light h3,
+.light h4,
+.light p {
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+
+.dark h4,
+.dark p {
+  color: white;
+  /* O cualquier otro color que desees para el tema oscuro */
+}
+
+@media screen and (max-width: 1100px) {
+  .imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  /* .divCotainer_skills {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  } */
+
+  /* .divContainerTools {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5px;
+
+  } */
+
+  /* .imagenes_Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: #202334;
+    border-radius: 7px;
+    margin: 0 auto;
+  } */
+
+  .imagenes_certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .img_certificates {
+    width: 300px;
+    min-height: 250px;
+    margin: 15px;
+    border-radius: 7px;
+
+  }
+
+  .img_proyects {
+    /* width: 100%; */
+    height: 250px;
+    margin-bottom: 7px;
+    margin: 0 auto;
+
+  }
+
+  .proyect {
+    /* width: 100%; */
+    /* Tamaño fijo para todas las tarjetas */
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Para que el contenido dentro se distribuya adecuadamente */
+    flex-wrap: wrap;
+    /* Para que las tarjetas se ajusten en múltiples filas si hay muchas */
+    background-color: #202334;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  h1 {
+    font-size: 20px;
+    /* Tamaño moderado */
+    margin-top: 10px;
+    /* Espacio debajo para separar del contenido siguiente */
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .divContainerTools{
+    margin: 0%;
+    flex-direction: none;
+   
+  }
+  .img_skills{
+    margin: 0 auto;
+  }
+  .img_certificates{
+    width: 250px;
+    min-height: 200px;
+  }
+  .proyect {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imagenes{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .divContainerTools{
+    margin: 3px;
+    flex-direction: none;
+   
+  }
+  .imagenes_Skills{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imagenes_certificates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,111 @@
+/* .navbarContainer {
+  background-color: #1c1f30;
+
+}
+.topSection{
+  background-color: #1c1f30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  width: 100px;
+  border-radius: 50%;
+  align-items: center;
+  border: 1px solid #202334
+} */
+/* .nav{
+  background-color: #1c1f30;
+ 
+} */
+
+.navbarContainer {
+  background-color: #1c1f30;
+  width: 300px;
+  height: 90vh; /* Cambia a 90% de la altura del viewport */
+  display: flex;
+  flex-direction: column;
+  position: fixed; 
+  top: 0; /* Comienza en la parte superior */
+  z-index: 10; /* Asegúrate de que esté por encima del contenido */
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: opacity 0.2s;
+}
+
+.topSection.collapsed {
+  display: none;
+}
+
+.img {
+  width: 100px;
+  border-radius: 50%;
+
+}
+
+/* .description {
+  color: #fff;
+} */
+.nav.dark {
+  background-color: #1c1f30;
+  color: white;
+}
+
+.nav.light {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.navbarContainer .dark {
+  background-color: #1c1f30;
+  color: white;
+}
+
+.navbarContainer .light {
+  background-color: #f5f5f5;
+  color: rgb(10, 10, 10);
+}
+
+.button-dark-mode {
+  margin-top: 16px;
+}
+
+.toggle {
+  display: none;
+}
+
+@media screen and (min-width: 901px) {
+  .navbarContainer {
+    background-color: #1c1f30;
+    width: 300px;
+    height: 90vh; /* Cambia a 90% de la altura del viewport */
+    display: flex;
+    flex-direction: column;
+    position: fixed; 
+    top: 0; /* Comienza en la parte superior */
+    z-index: 10; /* Asegúrate de que esté por encima del contenido */
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 900px) {
+  .toggle {
+    display: inline-block;
+    /* O flex, si es necesario */
+  }
+
+  .navbarContainer {
+    /* width: 100%; */
+    background-color: transparent;
+    /*position: relative;
+      o absolute/fixed según tu caso */
+
+  }
+}

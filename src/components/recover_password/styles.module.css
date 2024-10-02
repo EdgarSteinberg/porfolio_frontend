@@ -1,0 +1,59 @@
+
+
+.divContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 7px;
+    background-color: #1C1F30;
+}
+
+.fullScreen {
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.dark {
+    background-color: #292c3E;
+    color: white;
+}
+
+.light {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.light .divContainer{
+    background-color: #c7c7c7;
+}
+
+/* Estilos para el tema claro */
+.light label,
+.light a,
+.light h1,
+.light h3,
+.light h4,
+.light p {
+
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+.dark h4,
+.dark p {
+  color: white; /* O cualquier otro color que desees para el tema oscuro */
+}
+
+@media screen and (max-width: 600px){
+    .divContainer{
+        width: 80%;
+    }
+}

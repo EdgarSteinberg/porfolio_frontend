@@ -1,0 +1,116 @@
+h1 {
+    text-align: center;
+    color: yellow;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.img {
+    width: 100%;
+}
+
+.divCards {
+    max-width: 70%;
+    min-height: 30%;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin: 7px auto;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5%;
+    /* background-color: #1c1f30; */
+    background-color: #202334;
+}
+
+.technologiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    /* Espacio entre imágenes */
+    margin-top: 10px;
+}
+
+.techImg {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.dark {
+    background-color: #292c3E;
+    color: white;
+}
+
+.light {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+/* Estilos para el tema claro */
+.light h1,
+.light h3,
+.light h4,
+.light p {
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+
+.dark h4,
+.dark p {
+  color: white; 
+}
+
+.light .divCards{
+    background-color:#c7c7c7;
+}
+
+ /* .fullScreen {
+    height: 100vh; 
+ 
+}  */
+
+@media screen and (max-width: 900px){
+}
+
+@media screen and (max-width: 900px){
+    .divCards {
+        max-width: 95%;
+        min-height: 30%;
+        border: 1px solid white;
+        border-radius: 7px;
+        padding: 10px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+         height: 5%;  
+        background-color: #202334;   
+    }
+ 
+}
+
+@media screen and (max-width: 700px){
+    .divCards {
+        max-width: 95%;
+        min-height: 30%;
+      
+        padding: 10px;
+        height: 5%; 
+
+    }
+    h3{
+        font-size: 15px;
+        margin: 1px;
+    }
+    
+}
+

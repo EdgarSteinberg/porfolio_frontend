@@ -1,0 +1,38 @@
+h1{
+  color: yellow;
+  margin-bottom: 15px;
+}
+
+.divContainer{
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.dark {
+    background-color: #292c3E;
+    /* Color de fondo para el modo oscuro */
+    color: white;
+    /* Color de texto para el modo oscuro */
+}
+
+.light {
+    background-color: #f5f5f5;
+    /* Color de fondo para el modo claro */
+    color: black;
+    /* Color de texto para el modo claro */
+}
+
+/* Estilos para el tema claro */
+.light h1,
+.light h3,
+.light h4,
+.light p {
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+.dark h3,
+.dark h4,
+.dark p {
+  color: white; /* O cualquier otro color que desees para el tema oscuro */
+}
