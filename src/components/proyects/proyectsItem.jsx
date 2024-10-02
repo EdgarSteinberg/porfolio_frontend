@@ -13,7 +13,7 @@ const ProyectsItem = ({ proyectos }) => {
                     {thumbnail && thumbnail.length > 0 ? (
                         <img
                             className={styles.img}
-                            src={`http://localhost:8080/img/${thumbnail[0]}`}
+                            src={`https://porfolio-back-lr6x.onrender.com/img/${thumbnail[0]}`}
                             alt={title}
                             style={{ width: '100%', height: 'auto' }}  // Asegúrate que las imágenes ocupen todo el espacio disponible
                         />
@@ -29,7 +29,7 @@ const ProyectsItem = ({ proyectos }) => {
                             <img
                                 key={techIndex}
                                 className={styles.techImg}
-                                src={`http://localhost:8080/technologies/${techImage}`}
+                                src={`https://porfolio-back-lr6x.onrender.com/technologies/${techImage}`}
                                 alt={`Technology ${techIndex}`}
                             />
                         ))

@@ -59,7 +59,7 @@ const SobreMi = () => {
                     
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <img className={styles.img_principal} src={`http://localhost:8080/image/${item.image}`} alt="imagen personal" />
+                        <img className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" />
                         <p className={styles.p}>{item.description}</p>
                     </div>
 
