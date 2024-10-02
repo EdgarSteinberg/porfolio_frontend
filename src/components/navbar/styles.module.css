@@ -106,6 +106,7 @@
     background-color: transparent;
     /*position: relative;
       o absolute/fixed según tu caso */
+    width: auto;
 
   }
 }
