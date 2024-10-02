@@ -27,7 +27,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
-    fetch('http://localhost:8080/api/users/register', {
+    fetch('https://porfolio-back-lr6x.onrender.com/api/users/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

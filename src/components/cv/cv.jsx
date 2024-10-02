@@ -10,7 +10,7 @@ const Cv = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/cv', {
+        fetch('https://porfolio-back-lr6x.onrender.com/api/cv', {
             method: 'GET'
         })
             .then(response => response.json())
