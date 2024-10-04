@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import SobreMiSkills from './SobreMiSkills';
 import SobreMiProyects from './sobreMiProyects';
 import SobreMiCertificaciones from './sobreMiCertificaciones';
-import {ThemeContext} from '../../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 
 
 const SobreMi = () => {
@@ -15,8 +15,13 @@ const SobreMi = () => {
     const [error, setError] = useState(null);
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
+    const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
+    const url = isProduction
+        ? 'https://porfolio-back-lr6x.onrender.com/api/aboutme'
+        : 'http://localhost:8080/api/aboutme';
+
     useEffect(() => {
-        fetch('https://porfolio-back-lr6x.onrender.com/api/aboutme', {
+        fetch(url, {
             method: 'GET',
         })
             .then(response => response.json())
@@ -33,7 +38,7 @@ const SobreMi = () => {
             .finally(() => setLoading(false))
     }, []);
 
-    if (loading ) return (
+    if (loading) return (
         <div style={{
             backgroundColor: isDarkMode ? '#202334' : '#fff', // Cambia el color de fondo según el tema
             color: isDarkMode ? '#c7c7c7' : '#202334', // Cambia el color del texto según el tema
@@ -56,7 +61,7 @@ const SobreMi = () => {
         <div className={`${styles.divContainer} ${isDarkMode ? styles.dark : styles.light}`}> {/* Aplicar estilos según el tema */}
             {aboutMe && aboutMe.map((item, index) => (
                 <div key={index} >
-                    
+
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
                         <img className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" />
@@ -65,13 +70,13 @@ const SobreMi = () => {
 
                     <h1>Tecnologias</h1>
                     <div className={styles.divCotainer_skills}>
-                    <br></br>
-                    <SobreMiSkills skills={item.skills} />
+                        <br></br>
+                        <SobreMiSkills skills={item.skills} />
                     </div>
 
                     <br></br>
                     <h1>Proyectos Destacados</h1>
-                    <SobreMiProyects/>
+                    <SobreMiProyects />
 
                     <br></br>
                     <Flex className={styles.divContainerTools}>
@@ -81,7 +86,7 @@ const SobreMi = () => {
                     <br></br>
                     <h1>Mis Certificaciones</h1>
                     <SobreMiCertificaciones certificates={item.certificates} />
-                  
+
                 </div>
             ))}
         </div>

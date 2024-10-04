@@ -10,8 +10,15 @@ const Proyects = () => {
     const [loading, setLoading] = useState(true);
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
+
+    const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
+    const url = isProduction
+        ? 'https://porfolio-back-lr6x.onrender.com/api/proyects'
+        : 'http://localhost:8080/api/proyects';
+
+
     useEffect(() => {
-        fetch('https://porfolio-back-lr6x.onrender.com/api/proyects', {
+        fetch(url, {
             method: 'GET',
             credentials: 'include'
         })
