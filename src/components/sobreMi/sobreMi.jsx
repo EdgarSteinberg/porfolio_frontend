@@ -8,7 +8,7 @@ import SobreMiProyects from './sobreMiProyects';
 import SobreMiCertificaciones from './sobreMiCertificaciones';
 import { ThemeContext } from '../../context/ThemeContext';
 
-
+//'https://porfolio-back-lr6x.onrender.com/api/aboutme'
 const SobreMi = () => {
     const [aboutMe, setAboutMe] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ const SobreMi = () => {
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
     const url = isProduction
-        ? 'https://porfolio-back-lr6x.onrender.com/api/aboutme'
+        ?  'http://porfolioback-production-bbd6.up.railway.app/api/aboutme'
         : 'http://localhost:8080/api/aboutme';
 
     useEffect(() => {
