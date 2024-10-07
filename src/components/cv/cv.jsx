@@ -8,9 +8,9 @@ const Cv = () => {
     const [cv, setCv] = useState([])
     const [loading, setLoading] = useState(true)
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
-
+    //https://porfolio-back-lr6x.onrender.com/api/cv
     useEffect(() => {
-        fetch('https://porfolio-back-lr6x.onrender.com/api/cv', {
+        fetch('https://porfolioback-production-bbd6.up.railway.app/cv', {
             method: 'GET'
         })
             .then(response => response.json())
