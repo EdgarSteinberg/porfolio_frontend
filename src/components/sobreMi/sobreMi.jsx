@@ -17,7 +17,7 @@ const SobreMi = () => {
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
     const url = isProduction
-        ?  'http://porfolioback-production-bbd6.up.railway.app/api/aboutme'
+        ?  'https://porfolioback-production-bbd6.up.railway.app/api/aboutme'
         : 'http://localhost:8080/api/aboutme';
 
     useEffect(() => {
