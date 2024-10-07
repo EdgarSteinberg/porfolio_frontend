@@ -10,7 +10,7 @@ const Cv = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
     //https://porfolio-back-lr6x.onrender.com/api/cv
     useEffect(() => {
-        fetch('https://porfolioback-production-bbd6.up.railway.app/cv', {
+        fetch('https://porfolioback-production-bbd6.up.railway.app/api/cv', {
             method: 'GET'
         })
             .then(response => response.json())
