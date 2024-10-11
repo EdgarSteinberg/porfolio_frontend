@@ -83,7 +83,7 @@ const Register = () => {
 
         <div className={styles.registro}>
         <h1 className={styles.h1}>REGISTRO</h1>
-        <Link to={"https://porfolio-back-lr6x.onrender.com/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
+        <Link to={"https://porfolioback-production-bbd6.up.railway.app/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
           <Button type="primary" htmlType="submit" >GITHUB</Button>
         </Flex></Link>
         
@@ -155,9 +155,6 @@ const Register = () => {
           </Flex>
 
           <br></br>
-          {/* <Flex vertical gap="small" style={{ width: '100%', }}>
-          <Link className={styles.registroBtn}  to={'/login'}> <Button type="primary" htmlType="submit" >Iniciar Sesion</Button></Link>
-        </Flex> */}
           <p>¿Ya tienes una cuenta?</p>
           <Link className={styles.a} to={'/login'}>Iniciar Sesión</Link>
         </form>

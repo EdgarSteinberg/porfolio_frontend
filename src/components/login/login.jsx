@@ -34,16 +34,15 @@ const Login = () => {
         })
             .then(response => response.json())
             .then(result => {
+
                 if (result.status === 'success') {
                     console.log(result.message);
-                    //alert("Login exitoso");
                     Swal.fire({
                         title: "Login exitoso",
                         icon: "success"
                     });
                 } else {
-                    console.error(result.error);
-                    //alert(`Error: ${result.error}`);
+
                     Swal.fire({
                         title: "Error al inciar sesion",
                         text: `Hubo un problema al inciar sesion: ${result.error}`,
@@ -52,8 +51,7 @@ const Login = () => {
                 }
             })
             .catch(error => {
-                console.error("Error de red:", error);
-                //alert("Hubo un problema con el login.");
+                
                 Swal.fire({
                     title: "Error de red",
                     text: "Hubo un problema con la conexión. Por favor, inténtalo más tarde.",
@@ -69,7 +67,6 @@ const Login = () => {
     }
 
     return (
-      //  <div className={`${isDarkMode ? styles.dark : styles.light}`}>
       <div className={`${isDarkMode ? styles.dark : styles.light} ${styles.fullScreen}`}>  
       <br></br>
             <br></br>
@@ -79,7 +76,7 @@ const Login = () => {
             <div className={styles.login}>
                 <h1 className={styles.h1}>INICIAR SESIÓN</h1>
 
-                <Link to={"https://porfolio-back-lr6x.onrender.com/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
+                <Link to={"https://porfolioback-production-bbd6.up.railway.app/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
                     <Button type="primary" htmlType="submit" >GITHUB</Button>
                 </Flex></Link>
 

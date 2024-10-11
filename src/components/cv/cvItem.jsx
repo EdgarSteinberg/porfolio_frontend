@@ -19,11 +19,11 @@ const CvItem = ({ cv }) => {
   return (
     <>
       <div className={styles.divContainer}>
-        <h1>Puesto: {cv.empresa}</h1>
+        <h1>{cv.empresa}</h1>
         {/* <p>Desde: {cv.fechaInicio} Hasta: {cv.fechaFin}</p> */}
         <p>Desde: {formatDate(cv.fechaInicio)} Hasta: {formatDate(cv.fechaFin)}</p>
         {/* <p>Puesto: {cv.puesto}</p> */}
-        <p>Descripcion:  {formatDescription(cv.descripcionTareas)} </p>
+        <p>{formatDescription(cv.descripcionTareas)} </p>
         <br></br>
         <p>Tecnologias: {cv.tecnologias}</p>
       </div>

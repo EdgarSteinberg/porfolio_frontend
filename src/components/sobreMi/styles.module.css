@@ -104,19 +104,11 @@
   color: rgb(10, 10, 10);
 }
 
-/* h1{
-  text-align: center;
-}
-
-h4{
-  text-align: center;
-} */
 p {
   font-size: 15px;
   text-align: center;
   font-weight: bolder;
 }
-
 
 h3 {
   text-align: center;
@@ -124,28 +116,20 @@ h3 {
   color: yellow;
 }
 
-
-
 h1 {
   font-size: 24px;
-  /* Tamaño moderado */
   font-weight: bold;
-  /* Resalta el título */
   text-align: center;
-  /* Centra el texto */
   color: yellow;
-  /* Color claro para contrastar con el fondo oscuro */
   margin: 5px;
   text-decoration: underline;
 }
 
 h4 {
   font-size: 18px;
-  /* Tamaño más pequeño que el h1 */
   font-weight: normal;
   text-align: center;
   color: #c7c7c7;
-  /* Color gris claro que combina bien con el fondo oscuro */
 }
 
 p {
@@ -158,22 +142,16 @@ p {
 
 .dark {
   background-color: #292c3E;
-  /* Color de fondo para el modo oscuro */
   color: white;
-  /* Color de texto para el modo oscuro */
 }
 
 .light {
   background-color: #f5f5f5;
-  /*Color de fondo para el modo claro */
   color: black;
-  /* Color de texto para el modo claro */
 }
 
 .light .imagenes_Skills {
   background-color: #c7c7c7;
-  /* border-radius: 0;*/
-
 }
 
 .light .proyect {
@@ -198,7 +176,6 @@ p {
 .dark h4,
 .dark p {
   color: white;
-  /* O cualquier otro color que desees para el tema oscuro */
 }
 
 @media screen and (max-width: 1100px) {
@@ -212,37 +189,7 @@ p {
     margin: 0 auto;
 
   }
-
-  /* .divCotainer_skills {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-  } */
-
-  /* .divContainerTools {
-    display: flex;
-
-    justify-content: space-around;
-    align-items: center;
-
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 5px;
-
-  } */
-
-  /* .imagenes_Skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background-color: #202334;
-    border-radius: 7px;
-    margin: 0 auto;
-  } */
-
+ 
   .imagenes_certificates {
     display: flex;
     justify-content: center;
@@ -342,5 +289,9 @@ p {
     align-items: center;
     width: 250px;
     min-height: 200px;
+  }
+
+  .img_principal{
+    width: 30%
   }
 }

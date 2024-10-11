@@ -73,14 +73,6 @@ p {
     background-color:#c7c7c7;
 }
 
- /* .fullScreen {
-    height: 100vh; 
- 
-}  */
-
-@media screen and (max-width: 900px){
-}
-
 @media screen and (max-width: 900px){
     .divCards {
         max-width: 95%;

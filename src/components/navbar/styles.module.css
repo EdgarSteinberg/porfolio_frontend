@@ -1,26 +1,3 @@
-/* .navbarContainer {
-  background-color: #1c1f30;
-
-}
-.topSection{
-  background-color: #1c1f30;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.img{
-  width: 100px;
-  border-radius: 50%;
-  align-items: center;
-  border: 1px solid #202334
-} */
-/* .nav{
-  background-color: #1c1f30;
- 
-} */
-
 .navbarContainer {
   background-color: #1c1f30;
   width: 300px;
@@ -50,9 +27,6 @@
 
 }
 
-/* .description {
-  color: #fff;
-} */
 .nav.dark {
   background-color: #1c1f30;
   color: white;

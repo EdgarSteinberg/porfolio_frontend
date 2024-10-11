@@ -1,25 +1,34 @@
 import { useEffect, useState, useContext } from 'react';
 import styles from './styles.module.css';
-import { Button, Flex, Skeleton } from 'antd';
-import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
+import { Button, Flex } from 'antd';
+import { RightSquareOutlined, DownloadOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import SobreMiSkills from './SobreMiSkills';
 import SobreMiProyects from './sobreMiProyects';
 import SobreMiCertificaciones from './sobreMiCertificaciones';
 import { ThemeContext } from '../../context/ThemeContext';
+import SkeletonLoading from '../skeleton/skeletonLoading';
+
 
 //'https://porfolio-back-lr6x.onrender.com/api/aboutme'
 const SobreMi = () => {
     const [aboutMe, setAboutMe] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
     const url = isProduction
-        ?  'https://porfolioback-production-bbd6.up.railway.app/api/aboutme'
+        ? 'https://porfolioback-production-bbd6.up.railway.app/api/aboutme'
         : 'http://localhost:8080/api/aboutme';
 
+
+    const handleDownload = () => {
+        // Aquí puedes implementar la lógica para descargar el CV
+        const link = document.createElement('a');
+        link.href = '/Cv_Developer_EdgarSteinberg.pdf'; // Reemplaza con la ruta correcta de tu CV
+        link.download = 'Cv_Developer_EdgarSteinberg.pdf'; // Nombre del archivo que se descargará
+        link.click();
+    };
     useEffect(() => {
         fetch(url, {
             method: 'GET',
@@ -39,23 +48,9 @@ const SobreMi = () => {
     }, []);
 
     if (loading) return (
-        <div style={{
-            backgroundColor: isDarkMode ? '#202334' : '#fff', // Cambia el color de fondo según el tema
-            color: isDarkMode ? '#c7c7c7' : '#202334', // Cambia el color del texto según el tema
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh'  // Esto asegura que el contenedor ocupe toda la altura de la ventana
-        }}>
-            <Skeleton
-                active
-                avatar
-                paragraph={{ rows: 10 }}  // Número de líneas del texto en el Skeleton
-                title={{ width: '70%' }}  // Ancho del título del Skeleton
-            />
-        </div>
+        <SkeletonLoading />
     );
-    if (error) return <div>{error}</div>;
+
 
     return (
         <div className={`${styles.divContainer} ${isDarkMode ? styles.dark : styles.light}`}> {/* Aplicar estilos según el tema */}
@@ -66,7 +61,9 @@ const SobreMi = () => {
                     <div className={styles.imagenes}>
                         <img className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" />
                         <p className={styles.p}>{item.description}</p>
+                        
                     </div>
+                    <Button type='primary' onClick={handleDownload} icon={<DownloadOutlined />}>descargar cv</Button>
 
                     <h1>Tecnologias</h1>
                     <div className={styles.divCotainer_skills}>

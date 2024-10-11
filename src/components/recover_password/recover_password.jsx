@@ -4,15 +4,12 @@ import Swal from 'sweetalert2';
 import styles from './styles.module.css';
 import { ThemeContext } from "../../context/ThemeContext";
 
-
-
 const Recover_password = () => {
     const [formData, setFormData] = useState({
         email: ''
     });
 
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,7 +23,7 @@ const Recover_password = () => {
         e.preventDefault();
         console.log("Datos del formulario:", formData);
 
-        fetch('https://porfolio-back-lr6x.onrender.com/api/users/recover-password', {
+        fetch('https://porfolioback-production-bbd6.up.railway.app/api/users/recover-password', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

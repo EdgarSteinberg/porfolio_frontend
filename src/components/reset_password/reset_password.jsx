@@ -26,7 +26,7 @@ const Reset_password = () => {
         e.preventDefault();
         console.log('Contraseña restablecida', formData);
 
-        fetch('https://porfolio-back-lr6x.onrender.com/api/users/reset-password', {
+        fetch('https://porfolioback-production-bbd6.up.railway.app/api/users/reset-password', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

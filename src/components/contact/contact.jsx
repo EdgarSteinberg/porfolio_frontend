@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import { Button, Flex, Input } from 'antd';
 import Swal from 'sweetalert2';
 import { ThemeContext } from "../../context/ThemeContext";
+import SkeletonLoading from "../skeleton/skeletonLoading";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -10,19 +11,31 @@ const Contact = () => {
         email: '',
         message: ''
     });
+    const [loading, setLoading] = useState(false)
     const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData(prevData => ({
+            ...prevData,
             [name]: value
-        })
+        }));
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!formData.name || !formData.email || !formData.message) {
+            Swal.fire({
+                title: "Campos Vacíos",
+                text: "Por favor, completa todos los campos antes de enviar el formulario.",
+                icon: "warning"
+            });
+            return;
+        }
+
+        setLoading(true);
 
         try {
             const response = await fetch('https://porfolioback-production-bbd6.up.railway.app/api/messages', {
@@ -35,16 +48,12 @@ const Contact = () => {
             const result = await response.json();
 
             if (result.status === 'success') {
-                console.log(result.message);
-                // alert("Mensaje enviado");
                 Swal.fire({
                     title: "Correo Enviado",
                     text: "El correo se ha enviado correctamente.",
                     icon: "success"
                 });
             } else {
-                console.error(result.error);
-                //alert(`Error: ${result.error}`);
                 Swal.fire({
                     title: "Error al Enviar Correo",
                     text: `Hubo un problema al enviar el correo: ${result.error}`,  // Mostramos el error en el mensaje
@@ -53,7 +62,6 @@ const Contact = () => {
             }
         } catch (error) {
             console.error('Error al enviar el mensaje:', error);
-            //alert('Error al enviar el mensaje');
             Swal.fire({
                 title: "Error",
                 text: "Hubo un error al enviar el mensaje. Inténtalo más tarde.",
@@ -65,13 +73,16 @@ const Contact = () => {
                 email: '',
                 message: ''
             });
+            setLoading(false)
         }
     }
+
+    if (loading) return <SkeletonLoading />
+
     return (
         <>
             <div className={styles.divContainer}>
-             {/* <div className={`${isDarkMode ? styles.dark : styles.light}`}> */}
-             <div className={`${isDarkMode ? styles.dark : styles.light} ${styles.fullScreen}`}>     
+                <div className={`${isDarkMode ? styles.dark : styles.light} ${styles.fullScreen}`}>
                     <br></br>
                     <br></br>
 
@@ -112,8 +123,8 @@ const Contact = () => {
                             />
                         </div>
                         <br></br>
-                        <Flex vertical='true' gap="small" style={{ width: '100%', }}>
-                            <Button type="primary" htmlType="submit" >Enviar</Button>
+                        <Flex vertical='vertical' gap="small" style={{ width: '100%', }}>
+                            <Button type="primary" htmlType="submit" disabled={loading} > {loading ? 'Enviando...' : 'Enviar'}</Button>
                         </Flex>
                     </form>
                 </div>

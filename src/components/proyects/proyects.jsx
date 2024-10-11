@@ -1,14 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from './styles.module.css';
-import { Button, Skeleton } from 'antd';
-import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
 import ProyectsItem from "./proyectsItem";
 import { ThemeContext } from '../../context/ThemeContext';
+import SkeletonLoading from "../skeleton/skeletonLoading";
 
 const Proyects = () => {
     const [proyects, setProyects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+    const { isDarkMode } = useContext(ThemeContext);
 
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
@@ -32,22 +31,17 @@ const Proyects = () => {
 
     return (
         <div className={`${isDarkMode ? styles.dark : styles.light}`}>
-            <br></br>
-            <h1 className={styles.heading}>PROYECTOS</h1>
             <div className={styles.div}>
                 {loading ? (
-                    <Skeleton
-                        active
-                        avatar
-                        paragraph={{ rows: 16 }}  // Número de líneas del texto en el Skeleton
-                        title={{ width: '70%' }}  // Ancho del título del Skeleton
-                    />
+                    <SkeletonLoading />
                 ) : (
-                    proyects.map((proyect, index) =>
-
-                        <ProyectsItem key={index} proyectos={proyect} />
-
-                    ).reverse()
+                    <>
+                        <br></br>
+                        <h1 className={styles.heading}>PROYECTOS</h1>
+                        {proyects.map((proyect, index) => (
+                            <ProyectsItem key={index} proyectos={proyect} />
+                        )).reverse()}
+                    </>
                 )}
             </div>
         </div>
