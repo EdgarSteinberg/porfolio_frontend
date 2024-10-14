@@ -6,7 +6,7 @@ const SobreMiCertificaciones = ({ certificates }) => {
             <div className={styles.imagenes_certificates}>
                 {certificates && certificates.length > 0 && certificates.map((cert, index) => (
                     <div key={index}>
-                        <img className={styles.img_certificates} src={`https://porfolio-back-lr6x.onrender.com/certificates/${cert}`} alt={`certificate ${index}`} loading="lazy" />
+                        <img className={styles.img_certificates} src={`https://porfolio-back-lr6x.onrender.com/certificates/${cert}`} alt={`certificate ${index}`}  /> //loading="lazy"
                     </div>
                 ))}
             </div>

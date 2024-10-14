@@ -16,8 +16,8 @@ const ProyectsItem = ({ proyectos }) => {
                             src={`https://porfolio-back-lr6x.onrender.com/img/${thumbnail[0]}`}
                             alt={title}
                             style={{ width: '100%', height: 'auto' }}  // Asegúrate que las imágenes ocupen todo el espacio disponible
-                            loading="lazy"
-                            />
+                           
+                            /> //loading="lazy"
                     ) : (
                         <p >Descripción: {description}</p>
                     )}
