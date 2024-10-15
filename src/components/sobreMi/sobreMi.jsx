@@ -8,7 +8,8 @@ import SobreMiProyects from './sobreMiProyects';
 import SobreMiCertificaciones from './sobreMiCertificaciones';
 import { ThemeContext } from '../../context/ThemeContext';
 import SkeletonLoading from '../skeleton/skeletonLoading';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 //'https://porfolio-back-lr6x.onrender.com/api/aboutme'
 const SobreMi = () => {
@@ -59,7 +60,7 @@ const SobreMi = () => {
 
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <img className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" />
+                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur"/>
                         <p className={styles.p}>{item.description}</p>
                         
                     </div>

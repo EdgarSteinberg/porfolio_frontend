@@ -1,6 +1,8 @@
 import styles from './styles.module.css';
-import { Button, Skeleton } from 'antd';
+import { Button } from 'antd';
 import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ProyectsItem = ({ proyectos }) => {
     const { title, description, thumbnail, technologies, url } = proyectos;
@@ -11,12 +13,12 @@ const ProyectsItem = ({ proyectos }) => {
                 <div className={styles.technologiesContainer}>
                     <h3>{title}</h3>
                     {thumbnail && thumbnail.length > 0 ? (
-                        <img
+                        <LazyLoadImage
                             className={styles.img}
                             src={`https://porfolio-back-lr6x.onrender.com/img/${thumbnail[0]}`}
                             alt={title}
                             style={{ width: '100%', height: 'auto' }}  // Asegúrate que las imágenes ocupen todo el espacio disponible
-                           
+                            effect="blur" threshold={10}
                             /> //loading="lazy"
                     ) : (
                         <p >Descripción: {description}</p>
