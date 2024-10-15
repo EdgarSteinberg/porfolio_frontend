@@ -44,7 +44,7 @@ const Register = () => {
             icon: "success"
           })
             .then(() => {
-              window.location.hrf = result.redirectUrl
+              window.location.href = result.redirectUrl
             })
         } else {
           console.error(result.error);
