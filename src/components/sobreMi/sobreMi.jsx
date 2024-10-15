@@ -60,11 +60,14 @@ const SobreMi = () => {
 
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur"/>
+                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={10}/>
                         <p className={styles.p}>{item.description}</p>
                         
                     </div>
+                    <div className={styles.btn} >
                     <Button type='primary' onClick={handleDownload} icon={<DownloadOutlined />}>descargar cv</Button>
+                    </div>
+                  
 
                     <h1>Tecnologias</h1>
                     <div className={styles.divCotainer_skills}>

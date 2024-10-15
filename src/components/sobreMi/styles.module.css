@@ -31,7 +31,7 @@
 }
 
 .img_principal {
-  width: 19%;
+  width: 150px;
 }
 
 .img_certificates {
@@ -292,6 +292,14 @@ p {
   }
 
   .img_principal{
-    width: 30%
+    width: 100px;
+  }
+
+  .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
   }
 }
