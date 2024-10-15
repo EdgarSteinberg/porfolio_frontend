@@ -54,7 +54,7 @@ const Login = () => {
                 }
             })
             .catch(error => {
-                
+
                 Swal.fire({
                     title: "Error de red",
                     text: "Hubo un problema con la conexión. Por favor, inténtalo más tarde.",
@@ -70,8 +70,8 @@ const Login = () => {
     }
 
     return (
-      <div className={`${isDarkMode ? styles.dark : styles.light} ${styles.fullScreen}`}>  
-      <br></br>
+        <div className={`${isDarkMode ? styles.dark : styles.light} ${styles.fullScreen}`}>
+            <br></br>
             <br></br>
             <br></br>
             <br></br>
