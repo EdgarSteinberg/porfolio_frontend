@@ -40,6 +40,9 @@ const Login = () => {
                     Swal.fire({
                         title: "Login exitoso",
                         icon: "success"
+                    }).then(() => {
+                        // Redirigir al usuario a la URL proporcionada
+                        window.location.href = result.redirectUrl;
                     });
                 } else {
 
