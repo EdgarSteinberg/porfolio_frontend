@@ -8,7 +8,7 @@ const SobreMiCertificaciones = ({ certificates }) => {
             <div className={styles.imagenes_certificates}>
                 {certificates && certificates.length > 0 && certificates.map((cert, index) => (
                     <div key={index}>
-                        <LazyLoadImage className={styles.img_certificates} src={`https://porfolio-back-lr6x.onrender.com/certificates/${cert}`} alt={`certificate ${index}`} effect="blur" threshold={10}/> 
+                        <LazyLoadImage className={styles.img_certificates} src={`https://porfolioback-production-bbd6.up.railway.app/certificates/${cert}`} alt={`certificate ${index}`} effect="blur" threshold={10}/> 
                     </div>
                 ))}
             </div>

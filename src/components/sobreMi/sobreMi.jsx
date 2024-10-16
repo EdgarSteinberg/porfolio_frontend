@@ -60,7 +60,7 @@ const SobreMi = () => {
 
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={10}/>
+                        <LazyLoadImage className={styles.img_principal} src={`https://porfolioback-production-bbd6.up.railway.app/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100}/>
                         <p className={styles.p}>{item.description}</p>
                         
                     </div>
