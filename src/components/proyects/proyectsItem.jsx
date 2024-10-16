@@ -15,7 +15,7 @@ const ProyectsItem = ({ proyectos }) => {
                     {thumbnail && thumbnail.length > 0 ? (
                         <LazyLoadImage
                             className={styles.img}
-                            src={`https://porfolio-back-lr6x.onrender.com/img/${thumbnail[0]}`}
+                            src={`https://porfolioback-production-bbd6.up.railway.app/img/${thumbnail[0]}`}
                             alt={title}
                             style={{ width: '100%', height: 'auto' }}  // Asegúrate que las imágenes ocupen todo el espacio disponible
                             effect="blur" threshold={10}
@@ -32,7 +32,7 @@ const ProyectsItem = ({ proyectos }) => {
                             <img
                                 key={techIndex}
                                 className={styles.techImg}
-                                src={`https://porfolio-back-lr6x.onrender.com/technologies/${techImage}`}
+                                src={`https://porfolioback-production-bbd6.up.railway.app/technologies/${techImage}`}
                                 alt={`Technology ${techIndex}`}
                             />
                         ))
