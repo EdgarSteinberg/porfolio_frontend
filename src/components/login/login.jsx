@@ -25,7 +25,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('https://porfolioback-production-bbd6.up.railway.app/api/users/login', {
+        fetch('https://porfolio-back-lr6x.onrender.com/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ const Login = () => {
             <div className={styles.login}>
                 <h1 className={styles.h1}>INICIAR SESIÓN</h1>
 
-                <Link to={"https://porfolioback-production-bbd6.up.railway.app/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
+                <Link to={"https://porfolio-back-lr6x.onrender.comp/api/github"}> <Flex vertical gap="small" style={{ width: '100%', }}>
                     <Button type="primary" htmlType="submit" >GITHUB</Button>
                 </Flex></Link>
 

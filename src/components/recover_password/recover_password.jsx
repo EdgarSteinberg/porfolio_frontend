@@ -23,7 +23,7 @@ const Recover_password = () => {
         e.preventDefault();
         console.log("Datos del formulario:", formData);
 
-        fetch('https://porfolioback-production-bbd6.up.railway.app/api/users/recover-password', {
+        fetch('https://porfolio-back-lr6x.onrender.com/api/users/recover-password', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

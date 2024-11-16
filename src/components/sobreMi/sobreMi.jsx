@@ -19,7 +19,7 @@ const SobreMi = () => {
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
     const url = isProduction
-        ? 'https://porfolioback-production-bbd6.up.railway.app/api/aboutme'
+        ? 'https://porfolio-back-lr6x.onrender.com/api/aboutme'
         : 'http://localhost:8080/api/aboutme';
 
 
@@ -60,7 +60,7 @@ const SobreMi = () => {
 
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`https://porfolioback-production-bbd6.up.railway.app/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100}/>
+                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100}/>
                         <p className={styles.p}>{item.description}</p>
                         
                     </div>

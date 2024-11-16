@@ -38,7 +38,7 @@ const Contact = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://porfolioback-production-bbd6.up.railway.app/api/messages', {
+            const response = await fetch('https://porfolio-back-lr6x.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
