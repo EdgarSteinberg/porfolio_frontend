@@ -12,7 +12,7 @@ const Proyects = () => {
 
     const isProduction = window.location.hostname !== 'localhost'; // Cambia según tu lógica de producción
     const url = isProduction
-        ? 'https://porfolioback-production-bbd6.up.railway.app/api/proyects'
+        ? 'https://porfolio-back-lr6x.onrender.com/api/proyects'
         : 'http://localhost:8080/api/proyects';
 
 
