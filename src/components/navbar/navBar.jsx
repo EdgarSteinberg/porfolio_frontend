@@ -84,7 +84,7 @@ const NavBar = () => {
         {
             key: '7',
             icon: <AppstoreOutlined />,
-            label: <a href="http://localhost:8080/api/docs/" target='_blank' rel="noopener noreferrer">API Docs</a>,
+            label: <a href="https://porfolio-back-lr6x.onrender.com/api/docs/" target='_blank' rel="noopener noreferrer">API Docs</a>,
         },
         {
             key: '8',
