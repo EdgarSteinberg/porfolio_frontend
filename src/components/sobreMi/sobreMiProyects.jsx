@@ -7,10 +7,13 @@ const SobreMiProyects = () => {
         <>
             <div className={styles.proyectContainer}>
                 <div className={styles.proyect}>
+                    <h3>E-commerce Fullstack</h3>
                     <img className={styles.img_proyects} src='/cartFullStack.jpg' alt='proyecto' />
                     <p>
-                    Aplicación de e-commerce desarrollada con React para el frontend y Node.js con Express en el backend. Permite a los usuarios registrarse, iniciar sesión y completar su perfil con datos personales para realizar compras. El sistema genera un ticket al finalizar la transacción, y gestiona el acceso mediante roles: usuarios, usuarios premium y administradores. Los usuarios pueden subir documentos para solicitar el rol premium, y se envían notificaciones por correo en caso de eliminación de productos. También incluye un sistema de recuperación de contraseña por email, asegurando una experiencia segura y completa. Toda la gestión de productos y usuarios está optimizada para facilitar la administración desde el panel correspondiente.
+                        Tienda online desarrollada con <strong>React</strong> en el frontend y <strong>Node.js</strong> con <strong>Express</strong> en el backend. La app permite a los usuarios <strong>registrarse</strong>, <strong>iniciar sesión</strong> y completar su perfil para realizar compras, generando un <strong>ticket</strong> al finalizar la operación. La gestión de usuarios está basada en <strong>roles</strong>: usuario, premium y administrador. Los usuarios pueden <strong>subir documentos</strong> para solicitar el rol premium, y se notifican por <strong>email</strong> si alguno de sus productos es eliminado. El sistema también incluye <strong>recuperación de contraseña</strong> mediante correo electrónico. Todo el <strong>panel de administración</strong> está optimizado para facilitar el manejo de productos y usuarios de forma segura y eficiente.
                     </p>
+
+
                     <Flex
                         horizontal="true"
                         gap="small"
@@ -27,10 +30,10 @@ const SobreMiProyects = () => {
                     <h3>E-commerce Fullstack</h3>
                     <img className={styles.img_proyects} src='/caputra_proyecto_backend.jpg' alt='proyecto1' />
                     <p>
-                        Este proyecto es una plataforma de comercio electrónico desarrollada con arquitectura MVC. Permite a los usuarios registrarse, iniciar sesión y realizar compras.
-                        Está dividido en tres roles: <strong>usuario</strong>, <strong>usuario premium</strong>, y <strong>administrador</strong>, quienes tienen diferentes niveles de permisos. Los usuarios premium pueden crear y eliminar productos, mientras que los administradores también pueden gestionar usuarios y eliminar productos.
-                        El sistema almacena la última conexión de los usuarios, y si permanecen inactivos durante mucho tiempo, el administrador puede eliminarlos, enviándoles una notificación por correo electrónico. Además, los usuarios premium son notificados cuando alguno de sus productos es eliminado.
-                        El proyecto incluye una sección de contacto, y utiliza <strong>WebSockets</strong> para una experiencia en tiempo real.
+                        Plataforma de comercio electrónico desarrollada con arquitectura MVC utilizando Node.js y Express. Permite a los usuarios registrarse, iniciar sesión y realizar compras. El sistema está basado en roles: <strong>usuario</strong>, <strong>premium</strong> y <strong>administrador</strong>, cada uno con diferentes niveles de permisos.
+                        Los usuarios premium pueden crear y eliminar productos, mientras que los administradores también gestionan usuarios y controlan la plataforma.
+                        La aplicación registra la última conexión de cada usuario y permite al administrador eliminar cuentas inactivas, enviando notificaciones por correo electrónico. Además, los usuarios premium reciben avisos cuando sus productos son eliminados.
+                        El proyecto incluye una sección de contacto y utiliza <strong>WebSockets</strong> para brindar una experiencia en tiempo real.
                     </p>
 
                     <Flex horizontal="true" gap="small" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '5px' }}>
@@ -48,10 +51,9 @@ const SobreMiProyects = () => {
                     <h3>E-commerce React + Vite </h3>
                     <img className={styles.img_proyects} src='/captura_proyecto_react.jpg' alt='proyecto2' />
                     <p>
-                        Este proyecto es una tienda en línea de venta de celulares, PlayStation y notebooks, desarrollada con <strong>React</strong> y <strong>Vite</strong>, y con almacenamiento de datos en <strong>Firebase</strong>. Cada producto se presenta en una tarjeta con un botón para ver más detalles.
-                        Al hacer clic en "Ver detalles", puedes ver la descripción ampliada del producto, junto con una imagen más grande y un contador que te permite seleccionar la cantidad deseada. Al agregar productos, aparece un botón "Terminar compra" que redirige al carrito de compras.
-                        En el carrito se almacenan los productos seleccionados, mostrando la imagen, cantidad, precio y el valor total de la compra. También puedes eliminar productos del carrito si cambias de opinión.
-                        Al finalizar, un botón "Checkout" solicita tus datos para completar la compra. Tras enviar el formulario, se genera un número de orden con los detalles de tu compra, todo gestionado por Firebase.
+                        Este proyecto es una tienda en línea desarrollada con <strong>React</strong> y <strong>Vite</strong>, utilizando <strong>Firebase</strong> para almacenamiento de datos. Cada producto se muestra en una tarjeta con opción para ver detalles ampliados, incluyendo una imagen destacada y un contador para seleccionar cantidad.
+                        Al agregar productos, aparece un botón "Terminar compra" que redirige al carrito, donde se visualiza la imagen, cantidad, precio y el total de la compra. También se pueden eliminar productos del carrito de forma dinámica.
+                        En el proceso de checkout, el usuario completa un formulario con sus datos. Al finalizar la compra, se genera automáticamente una orden con número de seguimiento, todo gestionado a través de Firebase.
                     </p>
                     <Flex horizontal='true' gap='small' style={{ width: '100%', display: 'Flex', justifyContent: 'center', marginTop: '10px' }}>
                         <a href="https://github.com/EdgarSteinberg/codersreact" target={'_blank'} rel="noopener noreferrer"><Button type='primary'><GithubOutlined />GitHub</Button></a>
