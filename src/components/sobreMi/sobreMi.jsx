@@ -26,8 +26,8 @@ const SobreMi = () => {
     const handleDownload = () => {
         // Aquí puedes implementar la lógica para descargar el CV
         const link = document.createElement('a');
-        link.href = '/cv_developer_edgar_steinberg_abril.pdf'; // Reemplaza con la ruta correcta de tu CV
-        link.download = 'cv_developer_edgar_steinberg_abril.pdf'; // Nombre del archivo que se descargará
+        link.href = '/DevEdgarSteinberg6.pdf'; // Reemplaza con la ruta correcta de tu CV
+        link.download = 'DevEdgarSteinberg6.pdf'; // Nombre del archivo que se descargará
         link.click();
     };
     useEffect(() => {
@@ -60,14 +60,17 @@ const SobreMi = () => {
 
                     <h1>Edgar Steinberg</h1>
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100}/>
+                        <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100} />
                         <p className={styles.p}>{item.description}</p>
-                        
+
                     </div>
                     <div className={styles.btn} >
-                    <Button type='primary' onClick={handleDownload} icon={<DownloadOutlined />}>descargar cv</Button>
+                        <Button type='primary' onClick={handleDownload} icon={<DownloadOutlined />}>descargar cv</Button>
                     </div>
-                  
+
+                    <br></br>
+                    <h1>Proyectos Destacados</h1>
+                    <SobreMiProyects />
 
                     <h1>Tecnologias</h1>
                     <div className={styles.divCotainer_skills}>
@@ -75,9 +78,6 @@ const SobreMi = () => {
                         <SobreMiSkills skills={item.skills} />
                     </div>
 
-                    <br></br>
-                    <h1>Proyectos Destacados</h1>
-                    <SobreMiProyects />
 
                     <br></br>
                     <Flex className={styles.divContainerTools}>
