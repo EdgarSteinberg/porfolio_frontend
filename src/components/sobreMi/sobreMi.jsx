@@ -66,7 +66,7 @@ const SobreMi = () => {
                     </div> */}
 
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`/public/yo_transparente.png`} alt="imagen personal" effect="blur" threshold={100} />
+                        <LazyLoadImage className={styles.img_principal} src={`/yo_transparente.png`} alt="imagen personal" effect="blur" threshold={100} />
                         <p className={styles.p}>Hola, soy Edgar Steinberg. Soy un desarrollador web apasionado por crear soluciones tanto en el frontend como en el backend. Con experiencia en tecnologías como React y Node.js, me especializo en desarrollar aplicaciones web responsivas y optimizadas, siempre enfocándome en una experiencia de usuario fluida y eficiente. Busco constantemente nuevos desafíos que me permitan seguir aprendiendo y perfeccionando mis habilidades en el mundo del desarrollo web. </p>
 
                     </div>
