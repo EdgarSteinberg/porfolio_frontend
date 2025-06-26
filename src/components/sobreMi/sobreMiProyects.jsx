@@ -1,14 +1,18 @@
 import styles from './styles.module.css';
 import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
-import { Button, Flex, Skeleton } from 'antd';
+import { Button, Flex } from 'antd';
+import { useInView } from 'react-intersection-observer';
 
 const SobreMiProyects = () => {
+    const { ref, inView } = useInView({ triggerOnce: true });
+
     return (
         <>
             <div className={styles.proyectContainer}>
-                   <div className={styles.proyect}>
+                <div className={styles.proyect}>
                     <h3>E-commerce Fullstack</h3>
                     {/*     <img className={styles.img_proyects} src='/cartFullStack.jpg' alt='proyecto' /> */}
+
                     <video
                         src="/videos/fligth956.mp4"
                         autoPlay
@@ -39,15 +43,20 @@ const SobreMiProyects = () => {
                 <div className={styles.proyect}>
                     <h3>E-commerce Fullstack</h3>
                     {/*     <img className={styles.img_proyects} src='/cartFullStack.jpg' alt='proyecto' /> */}
-                    <video
-                        src="/videos/mobile.mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }}
-                        poster="/cartFullStack.jpg"
-                    />
+
+                    <div ref={ref}>
+                        {inView && (
+                            <video
+                                src="/videos/mobile.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                preload="none"
+                                style={{ width: '100%', borderRadius: '12px' }}
+                            />
+                        )}
+                    </div>
                     <p>
                         Tienda online desarrollada con <strong>React</strong> en el frontend y <strong>Node.js</strong> con <strong>Express</strong> en el backend. La app permite a los usuarios <strong>registrarse</strong>, <strong>iniciar sesión</strong> y completar su perfil para realizar compras, generando un <strong>ticket</strong> al finalizar la operación. La gestión de usuarios está basada en <strong>roles</strong>: usuario, premium y administrador. Los usuarios pueden <strong>subir documentos</strong> para solicitar el rol premium, y se notifican por <strong>email</strong> si alguno de sus productos es eliminado. El sistema también incluye <strong>recuperación de contraseña</strong> mediante correo electrónico. Todo el <strong>panel de administración</strong> está optimizado para facilitar el manejo de productos y usuarios de forma segura y eficiente.
                     </p>
