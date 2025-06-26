@@ -6,6 +6,36 @@ const SobreMiProyects = () => {
     return (
         <>
             <div className={styles.proyectContainer}>
+                   <div className={styles.proyect}>
+                    <h3>E-commerce Fullstack</h3>
+                    {/*     <img className={styles.img_proyects} src='/cartFullStack.jpg' alt='proyecto' /> */}
+                    <video
+                        src="/videos/fligth956.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }}
+                        poster="/cartFullStack.jpg"
+                    />
+                    <p>
+                        Tienda online desarrollada con <strong>React</strong> en el frontend y <strong>Node.js</strong> con <strong>Express</strong> en el backend. La app permite a los usuarios <strong>registrarse</strong>, <strong>iniciar sesión</strong> y completar su perfil para realizar compras, generando un <strong>ticket</strong> al finalizar la operación. La gestión de usuarios está basada en <strong>roles</strong>: usuario, premium y administrador. Los usuarios pueden <strong>subir documentos</strong> para solicitar el rol premium, y se notifican por <strong>email</strong> si alguno de sus productos es eliminado. El sistema también incluye <strong>recuperación de contraseña</strong> mediante correo electrónico. Todo el <strong>panel de administración</strong> está optimizado para facilitar el manejo de productos y usuarios de forma segura y eficiente.
+                    </p>
+
+
+                    <Flex
+                        horizontal="true"
+                        gap="small"
+                        style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '5px' }}>
+                        <a href="https://github.com/EdgarSteinberg/full_stack_react" target={'_blank'} rel="noopener noreferrer">
+                            <Button type='primary'><GithubOutlined />GitHub</Button>
+                        </a>
+                        <a href="https://mobilematrix.netlify.app/" target={'_blank'} rel="noopener noreferrer">
+                            <Button type='primary'><RightSquareOutlined />ver proyecto</Button>
+                        </a>
+                    </Flex>
+                </div>
+
                 <div className={styles.proyect}>
                     <h3>E-commerce Fullstack</h3>
                     {/*     <img className={styles.img_proyects} src='/cartFullStack.jpg' alt='proyecto' /> */}
