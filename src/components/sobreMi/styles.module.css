@@ -57,7 +57,8 @@
 
 .img_proyects {
   width: 100%;
-  margin-bottom: 7px;
+  min-height: 312px;
+ 
 }
 
 .proyectContainer {
@@ -117,7 +118,7 @@ h3 {
 
 h1 {
   font-size: 24px;
-  font-weight: bold;
+
   text-align: center;
   color: yellow;
   margin: 5px;
@@ -134,7 +135,7 @@ h4 {
 p {
   font-size: 15px;
   text-align: center;
-  font-weight: bolder;
+ 
   color: #e0e0e0;
   /* Color claro para el texto debajo de las imágenes */
 }
@@ -228,6 +229,7 @@ p {
     flex-wrap: wrap;
     /* Para que las tarjetas se ajusten en múltiples filas si hay muchas */
     background-color: #202334;
+    
   }
 
   p {
@@ -246,10 +248,11 @@ p {
   }
 }
 
-.flex{
+.flex {
   display: flex;
-}
+ 
 
+}
 @media screen and (max-width: 860px) {
   .flex{
        display: block; /* o grid, inline-block, según lo que necesites */

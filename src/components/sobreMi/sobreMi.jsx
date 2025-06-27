@@ -58,16 +58,28 @@ const SobreMi = () => {
             {aboutMe && aboutMe.map((item, index) => (
                 <div key={index} >
 
-                    <h1>Edgar Steinberg</h1> 
-                   {/*  <div className={styles.imagenes}>
+                    <h1>¡Bienvenido a mi portafolio!</h1>
+
+                    {/*  <div className={styles.imagenes}>
                         <LazyLoadImage className={styles.img_principal} src={`https://porfolio-back-lr6x.onrender.com/image/${item.image}`} alt="imagen personal" effect="blur" threshold={100} />
                         <p className={styles.p}>{item.description}</p>
 
                     </div> */}
 
                     <div className={styles.imagenes}>
-                        <LazyLoadImage className={styles.img_principal} src={`/yo_transparente.png`} alt="imagen personal" effect="blur" threshold={100} />
-                        <p className={styles.p}>Hola, soy Edgar Steinberg. Soy un desarrollador web apasionado por crear soluciones tanto en el frontend como en el backend. Con experiencia en tecnologías como React y Node.js, me especializo en desarrollar aplicaciones web responsivas y optimizadas, siempre enfocándome en una experiencia de usuario fluida y eficiente. Busco constantemente nuevos desafíos que me permitan seguir aprendiendo y perfeccionando mis habilidades en el mundo del desarrollo web. </p>
+                        <LazyLoadImage
+                            className={styles.img_principal}
+                            src={`/yo_transparente.png`}
+                            alt="imagen personal"
+                            effect="blur"
+                            threshold={100} />
+                        {/*  <p className={styles.p}>Hola, soy Edgar Steinberg. Soy un desarrollador web apasionado por crear soluciones tanto en el frontend como en el backend. Con experiencia en tecnologías como React y Node.js, me especializo en desarrollar aplicaciones web responsivas y optimizadas, siempre enfocándome en una experiencia de usuario fluida y eficiente. Busco constantemente nuevos desafíos que me permitan seguir aprendiendo y perfeccionando mis habilidades en el mundo del desarrollo web. </p> */}
+
+                        <p className={styles.p}>
+                            👋 Soy <strong>Edgar Steinberg</strong>, desarrollador <strong>Full Stack</strong> con experiencia en frontend usando <strong>React</strong> y <strong>Next.js</strong>, y en backend trabajando con <strong>Node.js</strong> y <strong>Express</strong>.
+                            🗄️ Manejo bases de datos como <strong>MongoDB</strong> y <strong>MySQL</strong>, combinando rendimiento y escalabilidad.
+                            🚀 Me apasiona crear aplicaciones web que no solo funcionen bien, sino que también ofrezcan una excelente experiencia de usuario.
+                        </p>
 
                     </div>
 
