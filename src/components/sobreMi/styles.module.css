@@ -52,26 +52,43 @@
   max-height: 35px;
   margin: 10px;
   text-align: center;
-  
+
 }
 
 .img_proyects {
   width: 100%;
-  min-height: 312px;
- 
+  min-height: 300px;
+
 }
 
-.proyectContainer {
+/* .proyectContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
   flex-wrap: wrap;
   gap: 10px;
+} */
+.carouselWrapper {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.proyectContainer {
+  width: 100%;
+  max-width: 1200px;
+  /* o lo que quieras como tope en pantallas grandes */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .proyect {
-  width: 80%;
+
   margin: 5px;
   padding: 10px;
   border-radius: 7px;
@@ -135,7 +152,7 @@ h4 {
 p {
   font-size: 15px;
   text-align: center;
- 
+
   color: #e0e0e0;
   /* Color claro para el texto debajo de las imágenes */
 }
@@ -178,7 +195,21 @@ p {
   color: white;
 }
 
-@media screen and (max-width: 1200px) {
+.flex {
+  display: flex;
+  min-width: 600px;
+
+}
+
+@media screen and (max-width: 1300px) {
+
+
+  .carouselWrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   .imagenes {
     display: flex;
     justify-content: center;
@@ -189,7 +220,7 @@ p {
     margin: 0 auto;
 
   }
- 
+
   .imagenes_certificates {
     display: flex;
     justify-content: center;
@@ -208,28 +239,10 @@ p {
 
   }
 
-  .img_proyects {
-    /* width: 100%; */
-    height: 250px;
-    margin-bottom: 7px;
-    margin: 0 auto;
 
-  }
-
-  .proyect {
-    /* width: 100%; */
-    /* Tamaño fijo para todas las tarjetas */
-    margin: 5px;
-    padding: 10px;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Para que el contenido dentro se distribuya adecuadamente */
-    flex-wrap: wrap;
-    /* Para que las tarjetas se ajusten en múltiples filas si hay muchas */
-    background-color: #202334;
-    
+  .flex {
+    display: block;
+    /* o grid, inline-block, según lo que necesites */
   }
 
   p {
@@ -248,50 +261,85 @@ p {
   }
 }
 
-.flex {
-  display: flex;
- 
 
-}
-@media screen and (max-width: 860px) {
-  .flex{
-       display: block; /* o grid, inline-block, según lo que necesites */
+@media screen and (max-width: 900px) {
+  .flex {
+    display: block;
+    /* o grid, inline-block, según lo que necesites */
   }
-  .divContainerTools{
+
+  .divContainerTools {
     margin: 0%;
     flex-direction: none;
-   
+
   }
-  .img_skills{
+
+  .img_skills {
     margin: 0 auto;
   }
-  .img_certificates{
+
+  .img_certificates {
     width: 250px;
     min-height: 200px;
   }
-  .proyect {
-    width: 100%;
-  }
-}
 
-@media screen and (max-width: 500px) {
-  .imagenes{
+  .proyect {
+    /* width: 100%; */
+    /* Tamaño fijo para todas las tarjetas */
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /* Para que el contenido dentro se distribuya adecuadamente */
+    flex-wrap: wrap;
+    /* Para que las tarjetas se ajusten en múltiples filas si hay muchas */
+    background-color: #202334;
+
+  }
+
+  .carouselWrapper {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .divContainerTools{
+@media screen and (max-width: 760px) {
+  .carouselWrapper {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .flex {
+    min-width: 700px;
+
+  }
+
+
+}
+
+@media screen and (max-width: 660px) {
+  .carouselWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .divContainerTools {
     margin: 3px;
     flex-direction: none;
-   
+
   }
-  .imagenes_Skills{
+
+  .imagenes_Skills {
     display: flex;
     flex-wrap: wrap;
   }
-  .imagenes_certificates{
+
+  .imagenes_certificates {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -300,15 +348,88 @@ p {
     min-height: 200px;
   }
 
-  .img_principal{
+  .img_principal {
     width: 100px;
   }
 
-  .btn{
+  .btn {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 5px;
+  }
+
+  .flex {
+
+    min-width: 400px;
+
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .imagenes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proyect {
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #202334;
+    width: 400px;
+  }
+
+  .img_proyects {
+
+    width: 700px;
+    margin-bottom: 7px;
+    width: 100%;
+
+  }
+
+  .carouselWrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+}
+
+
+@media screen and (max-width: 420px) {
+  .carouselWrapper {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+ 
+    .proyect {
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #202334;
+    width: 350px;
+  }
+
+  .divContainer{
+    padding: 7px;
+  }
+
+  
+  .flex {
+
+    min-width: 350px;
+
   }
 }

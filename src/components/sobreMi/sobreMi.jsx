@@ -10,6 +10,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 import SkeletonLoading from '../skeleton/skeletonLoading';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+ 
 
 //'https://porfolio-back-lr6x.onrender.com/api/aboutme'
 const SobreMi = () => {
@@ -65,7 +66,7 @@ const SobreMi = () => {
                         <p className={styles.p}>{item.description}</p>
 
                     </div> */}
-
+                  
                     <div className={styles.imagenes}>
                         <LazyLoadImage
                             className={styles.img_principal}

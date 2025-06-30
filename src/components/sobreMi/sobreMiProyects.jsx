@@ -3,6 +3,7 @@ import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
 import { Button, Flex } from 'antd';
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Carousel } from 'antd';
 
 const SobreMiProyects = () => {
     const { ref, inView } = useInView({ triggerOnce: true });
@@ -71,13 +72,20 @@ const SobreMiProyects = () => {
                     <div className={styles.proyect} styles={{ flex: '1' }}>
                         <h3>Electric Guitar – Tienda de Guitarras Online</h3>
 
-                        <img className={styles.img_proyects} src='/caputra_proyecto_backend.jpg' alt='proyecto1' />
-                        {/* <p>
-                            Plataforma de comercio electrónico desarrollada con arquitectura MVC utilizando Node.js y Express. Permite a los usuarios registrarse, iniciar sesión y realizar compras. El sistema está basado en roles: <strong>usuario</strong>, <strong>premium</strong> y <strong>administrador</strong>, cada uno con diferentes niveles de permisos.
-                            Los usuarios premium pueden crear y eliminar productos, mientras que los administradores también gestionan usuarios y controlan la plataforma.
-                            La aplicación registra la última conexión de cada usuario y permite al administrador eliminar cuentas inactivas, enviando notificaciones por correo electrónico. Además, los usuarios premium reciben avisos cuando sus productos son eliminados.
-                            El proyecto incluye una sección de contacto y utiliza <strong>WebSockets</strong> para brindar una experiencia en tiempo real.
-                        </p> */}
+                        {/* <img className={styles.img_proyects} src='/caputra_proyecto_backend.jpg' alt='proyecto1' /> */}
+                        <Carousel autoplay className={styles.carouselWrapper}>
+                            <div>
+                                <img className={styles.img_proyects} src='/guitarras.png' alt='proyecto1' />
+                            </div>
+                            <div>
+                                <img className={styles.img_proyects} src='/administrarProductos.png' alt='proyecto1' />
+                            </div>
+                            <div>
+                                <img className={styles.img_proyects} src='/adminitrarUsuarios.png' alt='proyecto1' />
+                            </div>
+
+                        </Carousel>
+
                         <p>⚙️ Stack Tecnológico</p>
                         <ul  >
                             <li>🧩 <strong>Frontend:</strong> Handlebars como motor de plantillas.</li>
@@ -121,12 +129,24 @@ const SobreMiProyects = () => {
 
                     <div className={styles.proyect} styles={{ flex: '1' }}>
                         <h3>Tienda Online de Electrónica</h3>
-                        <img className={styles.img_proyects} src='/captura_proyecto_react.jpg' alt='proyecto2' />
+                        {/*      <img className={styles.img_proyects} src='/captura_proyecto_react.jpg' alt='proyecto2' /> */}
+                        <Carousel autoplay className={styles.carouselWrapper}>
+                            <div>
+                                <img className={styles.img_proyects} src='/electronica1.png' alt='proyecto1' />
+                            </div>
+                            <div>
+                                <img className={styles.img_proyects} src='/electronica2.png' alt='proyecto1' />
+                            </div>
+                            <div>
+                                <img className={styles.img_proyects} src='/electronica3.png' alt='proyecto1' />
+                            </div>
+
+                        </Carousel>
                         <p>⚙️ Stack Tecnológico</p>
                         <ul  >
                             <li>🧩 <strong>Frontend:</strong> React con Vite, React Router DOM, Context API</li>
                             <li>🎨 <strong>Estilos:</strong> React Bootstrap y CSS Modules</li>
-                            <li>🧠 <strong>Otros:</strong> JSX, JavaScript moderno, modularización de componentes</li>
+                            <li>🧠 <strong>Otros:</strong> JSX JavaScript moderno, modularización de componentes</li>
                         </ul>
                         <p >🛠️ Funcionalidades principales:</p>
                         <Button type='primary' onClick={() => handleVerMas(vite)}>
