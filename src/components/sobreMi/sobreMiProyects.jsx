@@ -149,7 +149,7 @@ const SobreMiProyects = () => {
                             <li>🧠 <strong>Otros:</strong> JSX JavaScript moderno, modularización de componentes</li>
                         </ul>
                         <p >🛠️ Funcionalidades principales:</p>
-                        <Button type='primary' onClick={() => handleVerMas(vite)}>
+                        <Button type='primary' onClick={() => handleVerMas('vite')}>
                             {verMas['vite'] ? 'ver menos' : 'ver más'}
                         </Button>
                         {
