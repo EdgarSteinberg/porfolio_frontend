@@ -400,6 +400,11 @@ p {
     margin: 0 auto;
   }
 
+  .img_proyects {
+    width: 100%;
+    min-height: 200px;
+
+  }
 }
 
 
@@ -409,8 +414,8 @@ p {
     max-width: 300px;
     margin: 0 auto;
   }
- 
-    .proyect {
+
+  .proyect {
     margin: 5px auto;
     padding: 5px;
     border-radius: 7px;
@@ -422,11 +427,11 @@ p {
     width: 350px;
   }
 
-  .divContainer{
+  .divContainer {
     padding: 7px;
   }
 
-  
+
   .flex {
 
     min-width: 350px;
