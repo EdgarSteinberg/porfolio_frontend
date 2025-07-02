@@ -61,10 +61,10 @@ const SobreMiProyects = () => {
                             horizontal="true"
                             gap="small"
                             style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '5px' }}>
-                            <a href="https://github.com/EdgarSteinberg/full_stack_react" target={'_blank'} rel="noopener noreferrer">
+                            <a href="https://github.com/EdgarSteinberg/next-flight956-frontend" target={'_blank'} rel="noopener noreferrer">
                                 <Button type='primary'><GithubOutlined />GitHub</Button>
                             </a>
-                            <a href="https://mobilematrix.netlify.app/" target={'_blank'} rel="noopener noreferrer">
+                            <a href="https://fligth956.netlify.app/" target={'_blank'} rel="noopener noreferrer">
                                 <Button type='primary'><RightSquareOutlined />ver proyecto</Button>
                             </a>
                         </Flex>

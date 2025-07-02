@@ -38,9 +38,11 @@ const Proyects = () => {
                     <>
                         <br></br>
                         <h1 className={styles.heading}>PROYECTOS</h1>
-                        {proyects.map((proyect, index) => (
+                        <div  style={{display: 'flex', flexWrap: 'wrap'}}>
+                             {proyects.map((proyect, index) => (
                             <ProyectsItem key={index} proyectos={proyect} />
                         )).reverse()}
+                        </div>
                     </>
                 )}
             </div>

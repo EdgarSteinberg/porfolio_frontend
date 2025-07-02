@@ -13,7 +13,7 @@ p {
 }
 
 .divCards {
-    max-width: 70%;
+    max-width: 45%;
     min-height: 30%;
     border: 1px solid white;
     border-radius: 7px;
@@ -23,6 +23,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+ /*    flex-wrap: wrap; */
     height: 5%;
     /* background-color: #1c1f30; */
     background-color: #202334;
