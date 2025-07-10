@@ -3,11 +3,16 @@ import { Button } from 'antd';
 import { GithubOutlined, RightSquareOutlined } from '@ant-design/icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useState } from 'react';
 
 const ProyectsItem = ({ proyectos }) => {
     const { title, description, thumbnail, technologies, url } = proyectos;
+
+    const [verMas, setVerMas] = useState(false);
+
+    const handleToggle = () => setVerMas(prev => !prev);
     return (
-        <div className={`${styles.divCards } ${styles.fullScreen}`} style={{flexWrap: 'wrap'}}>
+        <div className={`${styles.divCards} ${styles.fullScreen}`} style={{ flexWrap: 'wrap' }}>
             <div   >
 
                 <div className={styles.technologiesContainer}>
@@ -17,13 +22,22 @@ const ProyectsItem = ({ proyectos }) => {
                             className={styles.img}
                             src={`https://porfolio-back-lr6x.onrender.com/img/${thumbnail[0]}`}
                             alt={title}
-                            style={{ width: '100%', height: 'auto' }}  // Asegúrate que las imágenes ocupen todo el espacio disponible
+                           // Asegúrate que las imágenes ocupen todo el espacio disponible
                             effect="blur" threshold={10}
-                            /> //loading="lazy"
+                        /> //loading="lazy"
                     ) : (
                         <p >Descripción: {description}</p>
                     )}
-                    <p >Descripción: {description}</p>
+                  <>
+                            <p>
+                                Descripción: {verMas ? description : `${description.slice(0, 200)}...`}
+                            </p>
+                            {description.length > 200 && (
+                                <Button type="link" onClick={handleToggle}>
+                                    {verMas ? 'Ver menos' : 'Ver más'}
+                                </Button>
+                            )}
+                        </>
                 </div>
 
                 <div className={styles.technologiesContainer}>
