@@ -28,7 +28,7 @@ const SobreMi = () => {
         // Aquí puedes implementar la lógica para descargar el CV
         const link = document.createElement('a');
         link.href = '/DevEdgarSteinberg6.pdf'; // Reemplaza con la ruta correcta de tu CV
-        link.download = 'DevEdgarSteinberg6.pdf'; // Nombre del archivo que se descargará
+        link.download = 'Dev_10EdgarSteinberg.pdf'; // Nombre del archivo que se descargará
         link.click();
     };
     useEffect(() => {
